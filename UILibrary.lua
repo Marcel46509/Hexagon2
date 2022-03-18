@@ -158,7 +158,7 @@ local library = {
     settings = {
         guiname = "Cuteware",
 		title = "Cuteware Premium",
-		logo = "rbxassetid://6647724008", -- "http://www.roblox.com/asset/?id=6597976562",
+		logo = "rbxassetid://6647724008",
         footer = " Get A Lot Of Bobuk",
         modal = true,
         font = Enum.Font.SourceSans,
