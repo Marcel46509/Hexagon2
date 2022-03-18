@@ -163,7 +163,7 @@ local library = {
         modal = true,
         font = Enum.Font.SourceSans,
         textsize = 16,
-        textstroke = true
+        textstroke = false
     },
     theme = {
         buttons = Color3.fromRGB(20, 200, 20), -- toggle, sliders colors
