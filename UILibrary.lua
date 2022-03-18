@@ -152,6 +152,16 @@ local function closeWindow(obj)
 	end
 end
 
+local RandomMessages = {
+	"Get A Lot Of Bobuk", "Cuteware UwU", "Ion Is Cracked", "Math.Random(UrMomValue),
+	"Get Your Free Jjsploit Out!", "Synapse X Winning!", "[Hint] Free Bobuk Code: 382", "Get Your Free Credits",
+	"Hello", "Hello My Daddyyy", "Cuteware Premium :Smile:", "20 Fps? No Problem Download Fps Unlocker!", "Hi",
+	"Free Presents", "Shop Dababy", "Super Idol", "UwU Baka", "tik tok", "Computer Boom Boom",
+	"Hi", "Hello", "Hi", "Hello", "Hi", "Hello", "Hi", "Hello", "Hi", "Hello", "Hi", "Hello", "Hi", "Hello",
+	"Hi", "Hello", "Hi", "Hello", "Hi", "Hello", "Hi", "Hello", "Hi", "Hello", "Hi", "Hello", "Hi", "Hello",
+	"Ban Ban Ban", "happy birthday",
+}
+
 local library = {
 	windows = {},
     pointers = {},
