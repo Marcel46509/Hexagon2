@@ -162,14 +162,16 @@ local RandomMessages = {
 	"Ban Ban Ban", "happy birthday",
 }
 
+local MessageRandom = RandomMessages[math.random(#RandomMessages)]
+
 local library = {
 	windows = {},
     pointers = {},
     settings = {
         guiname = "Cuteware",
 		title = "Cuteware Premium",
-		logo = "rbxassetid://6647724008",
-        footer = " Get A Lot Of Bobuk",
+		logo = "rbxassetid://6647724008", -- 6647724008
+        footer = " "..MessageRandom,
         modal = true,
         font = Enum.Font.SourceSans,
         textsize = 16,
