@@ -1596,7 +1596,7 @@ SettingsTabCategoryConfigs:AddButton("Save", function()
 end)
 
 SettingsTabCategoryConfigs:AddButton("Load", function()
---[[
+
 local a,b = pcall(function()
 		cfg = loadstring("return ".. readfile("Cuteware_Premium/configs/".. library.pointers.SettingsTabCategoryConfigsConfig.value..".cfg"))()
 	end)
@@ -1606,11 +1606,11 @@ local a,b = pcall(function()
 	elseif a == true then
 		library:LoadConfiguration(cfg)
 	end
---]]
 
-cfg = loadstring("return "..readfile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsConfig.value..".cfg"))()
-wait(0.5)
-library:LoadConfiguration(cfg)
+
+--cfg = loadstring("return "..readfile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsConfig.value..".cfg"))()
+--wait(0.5)
+--library:LoadConfiguration(cfg)
 
 end)
 
