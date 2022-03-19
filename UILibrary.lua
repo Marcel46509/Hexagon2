@@ -152,6 +152,7 @@ local function closeWindow(obj)
 	end
 end
 
+--[[
 local RandomMessages = {
 	"Get A Lot Of Bobuk", "Cuteware UwU", "Ion Is Cracked", "Math.Random(UrMomValue),
 	"Get Your Free Jjsploit Out!", "Synapse X Winning!", "[Hint] Free Bobuk Code: 382", "Get Your Free Credits",
@@ -163,7 +164,7 @@ local RandomMessages = {
 }
 
 local MessageRandom = RandomMessages[math.random(#RandomMessages)]
-
+--]]
 local library = {
 	windows = {},
     pointers = {},
@@ -171,7 +172,7 @@ local library = {
         guiname = "Cuteware",
 		title = "Cuteware Premium",
 		logo = "rbxassetid://6647724008", -- 6647724008
-        footer = " ".. MessageRandom,
+        footer = " Bruhcfg", -- .. MessageRandom,
         modal = true,
         font = Enum.Font.SourceSans,
         textsize = 16,
