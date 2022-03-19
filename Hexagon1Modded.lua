@@ -1734,24 +1734,30 @@ SettingsTabCategoryPlayers:AddLabel("Alive: ", "SettingsTabCategoryPlayersAlive"
 
 SettingsTabCategoryPlayers:AddLabel("Team: ", "SettingsTabCategoryPlayersTeam")
 
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+
 local SettingsTabCategoryConfigs = SettingsTab:AddCategory("Configs", 2)
 
 SettingsTabCategoryConfigs:AddTextBox("Name", "", "SettingsTabCategoryConfigsName")
 
-SettingsTabCategoryConfigs:AddDropdown("Config", {"-"}, "-", "SettingsTabCategoryConfigsConfig")
+-- Deleted lol -- SettingsTabCategoryConfigs:AddDropdown("Config", {"-"}, "-", "SettingsTabCategoryConfigsConfig")
+
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 SettingsTabCategoryConfigs:AddButton("Create", function()
     writefile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsName.value..".cfg", library:SaveConfiguration())
 end)
 
 SettingsTabCategoryConfigs:AddButton("Save", function()
-    writefile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsConfig.value..".cfg", library:SaveConfiguration())
+    writefile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsName.value..".cfg", library:SaveConfiguration())
 end)
 
 SettingsTabCategoryConfigs:AddButton("Load", function()
 
 local a,b = pcall(function()
-		cfg = loadstring("return ".. readfile("Cuteware_Premium/configs/".. library.pointers.SettingsTabCategoryConfigsConfig.value..".cfg"))()
+		cfg = loadstring("return ".. readfile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsName.value..".cfg"))()
 	end)
 	
 	if a == false then
@@ -1759,13 +1765,9 @@ local a,b = pcall(function()
 	elseif a == true then
 		library:LoadConfiguration(cfg)
 	end
-
-
---cfg = loadstring("return "..readfile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsConfig.value..".cfg"))()
---wait(0.5)
---library:LoadConfiguration(cfg)
-
 end)
+
+--[[
 
 SettingsTabCategoryConfigs:AddButton("Refresh", function()
 	local cfgs = {}
@@ -1779,14 +1781,18 @@ SettingsTabCategoryConfigs:AddButton("Refresh", function()
 	library.pointers.SettingsTabCategoryConfigsConfig.options = cfgs
 end)
 
+--]]
+
 SettingsTabCategoryConfigs:AddButton("Set as default", function()
-	if isfile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsConfig.value..".cfg") then
-		writefile("Cuteware_Premium/autoload.txt", library.pointers.SettingsTabCategoryConfigsConfig.value..".cfg")
+	if isfile("Cuteware_Premium/configs/"..library.pointers.SettingsTabCategoryConfigsName.value..".cfg") then
+		writefile("Cuteware_Premium/autoload.txt", library.pointers.SettingsTabCategoryConfigsName.value..".cfg")
 	else
 		writefile("Cuteware_Premium/autoload.txt", "")
 	end
 end)
--------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 local SettingsTabCategoryCredits = SettingsTab:AddCategory("Credits", 2)
 
