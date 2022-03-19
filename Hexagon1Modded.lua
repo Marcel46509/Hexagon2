@@ -1327,6 +1327,8 @@ end)
 
 MiscellaneousTabCategoryMain:AddToggle("NNS Dont Talk", false, "MiscellaneousTabCategoryMainNNSDontTalk")
 
+MiscellaneousTabCategoryMain:AddToggle("No Chat Filter", false, "MiscellaneousTabCategoryMainNoChatFilter")
+
 --[[
 MiscellaneousTabCategoryMain:AddToggle("Kill All", false, "MiscellaneousTabCategoryMainKillAll", function(val)
 	if val == true then
@@ -1659,11 +1661,9 @@ ExploitsTabCategoryMain:AddToggle("Inf Stamina", false, "ExploitsTabCategoryMain
 	end
 end)
 
-ExploitsTabCategoryMain:AddToggle("No Chat Filter", false, "ExploitsTabCategoryMainNoChatFilter")
+ExploitsTabCategoryMain:AddToggle("No Fall Damage", false, "MiscellaneousTabCategoryMainNoFallDamage")
 
-ExploitsTabCategoryMain:AddToggle("No Fall Damage", false, "ExploitsTabCategoryMainNoFallDamage")
-
-ExploitsTabCategoryMain:AddToggle("No Fire Damage", false, "ExploitsTabCategoryMainNoFireDamage")
+ExploitsTabCategoryMain:AddToggle("No Fire Damage", false, "MiscellaneousTabCategoryMainNoFireDamage")
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1688,7 +1688,6 @@ ScriptsTabCategoryMods:AddToggle("Old Gun Sounds", false, "ScriptsTabCategoryMod
 
         while val do
 	wait(0.5)
-	pcall(function()
 		local player = game:GetService("Players").LocalPlayer.Character
 		if player.EquippedTool.Value == "AK47" then
 			player.Gun.Shoot.SoundId = "rbxassetid://168436671"
@@ -1992,7 +1991,8 @@ ScriptsTabCategoryMods:AddToggle("Old Gun Sounds", false, "ScriptsTabCategoryMod
             player.Gun.Shoot.TimePosition = 0
 		end
 
-	end)
+
+
 end
 
 	elseif val == false then
