@@ -165,6 +165,7 @@ local RandomMessages = {
 
 local MessageRandom = RandomMessages[math.random(#RandomMessages)]
 --]]
+
 local library = {
 	windows = {},
     pointers = {},
